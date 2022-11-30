@@ -85,6 +85,8 @@ export async function getAllComments(quoteId) {
     throw new Error(data.message || 'Could not get comments.');
   }
 
+  console.log(data);
+
   const transformedComments = [];
 
   for (const key in data) {
@@ -96,5 +98,6 @@ export async function getAllComments(quoteId) {
     transformedComments.push(commentObj);
   }
 
+  console.log(transformedComments);
   return transformedComments;
 }
